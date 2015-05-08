@@ -4,7 +4,8 @@ jQuery.fn.extend({
      * @param {mixed} value
      * @returns {Boolean} If selected value not found in set, return false
      * @see http://semantic-ui.com/modules/dropdown.html
-	 * @author <mail@nikitian.ru> Nikitian
+     * @author <mail@nikitian.ru> Nikitian
+     * Example: console.log($(".ui.dropdown").dropdownSelect(somevalue));
      */
     dropdownSelect: function (value) {
         $(".menu",this).data("selectedValue", value);
