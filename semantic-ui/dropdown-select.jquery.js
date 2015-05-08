@@ -13,11 +13,11 @@ jQuery.fn.extend({
             if($(el).parent().data("selectedValue") == $(el).data("value")) {
                 $(this).parent().find(".item.active").removeClass("active selected");
                 $(el).addClass("active selected");
-                $(this).parent().parent().find("input[type='hidden']:first").val($(el).data("value"));
+                $(this).parent().parent().find("input[type='hidden']:first, select:first").val($(el).data("value"));
                 $(this).parent().prev(".text").empty().append($(el).html());
             }
         });
-        return ($("input[type='hidden']:first", this).val() == value);
+        return ($("input[type='hidden']:first, select:first", this).val() == value);
             
     }
 });
